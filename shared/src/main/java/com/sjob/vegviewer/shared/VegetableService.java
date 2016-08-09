@@ -1,4 +1,4 @@
-package com.sjob.vegviewer.sharedService;
+package com.sjob.vegviewer.shared;
 
 import com.sjob.vegviewer.common.Vegetable;
 import org.springframework.beans.factory.annotation.Autowired;

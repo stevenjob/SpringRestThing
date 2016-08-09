@@ -4,6 +4,10 @@ public class Vegetable {
 
     String name;
 
+    public Vegetable() {
+
+    }
+
     public Vegetable(String name) {
         this.name = name;
     }
