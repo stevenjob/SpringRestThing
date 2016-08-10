@@ -10,4 +10,6 @@ public interface VegetableRepository {
 
     List<Vegetable> getAllVegetables();
 
+    Vegetable getVegetableByName(String name);
+
 }

@@ -15,4 +15,8 @@ public class VegetableService {
     public List<Vegetable> getAllVegetables() {
         return vegetableRepository.getAllVegetables();
     }
+
+    public Vegetable getVegetableByName(String name) {
+        return vegetableRepository.getVegetableByName(name);
+    }
 }

@@ -85,4 +85,8 @@ public class InMemoryVegetableRepository implements VegetableRepository {
         return vegetables;
     }
 
+    @Override
+    public Vegetable getVegetableByName(String name) {
+        return new Vegetable("thing thing thitinhjgjhntjknmk");
+    }
 }

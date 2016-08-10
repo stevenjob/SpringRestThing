@@ -13,9 +13,13 @@ public class VegetableService {
 
     public List<Vegetable> getAllVegetables() {
         RestTemplate restTemplate = new RestTemplate();
-        new Vegetable();
-        Vegetable[] vegetables = restTemplate.getForObject("http://localhost:8002", Vegetable[].class);
+        Vegetable[] vegetables = restTemplate.getForObject("http://localhost:8003", Vegetable[].class);
 
         return Arrays.asList(vegetables);
+    }
+
+    public Vegetable getVegetableByName(String name) {
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject("http://localhost:8003/" + name, Vegetable.class);
     }
 }
