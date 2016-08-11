@@ -1,0 +1,25 @@
+html {
+    overflow-y: scroll;
+}
+
+.header-wrap {
+    position: fixed;
+    height: 50px;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: black;
+}
+
+.header {
+    color: #ffffff;
+    text-align: center;
+    height: 100%;
+    line-height: 2;
+}
+
+.main-container {
+    margin: 50px auto;
+    width: 900px;
+    border: 1px solid green;
+}

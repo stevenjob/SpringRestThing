@@ -2,14 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="styles/veg.css">
+    {{#with vegetable}}
+        <title>{{name}}</title>
+    {{/with}}
 </head>
 <body>
-{{#with vegetable}}
-    <div>{{name}}</div>
-    <div>
-        <div>{{description}}</div>
-    </div>
-{{/with}}
+<div class="header-wrap">
+    <div class="header">{{title}}</div>
+</div>
+<div class="main-container">
+    {{#with vegetable}}
+        <div>{{name}}</div>
+        <div>
+            <div>{{description}}</div>
+        </div>
+    {{/with}}
+</div>
 </body>
 </html>

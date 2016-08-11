@@ -31,7 +31,7 @@ public class VegetableController {
             return null;
         }
 
-        model.addAttribute("title", name);
+        model.addAttribute("title", "Vegetables");
         model.addAttribute("vegetable", vegetable);
         return "veg";
     }

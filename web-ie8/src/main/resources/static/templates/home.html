@@ -1,13 +1,22 @@
 <html>
-<head>
-    <title>{{title}}</title>
-</head>
-<body>
-<div>{{title}}</div>
-<ul>
-    {{#each vegetables}}
-    <li><a href="./{{name}}">{{name}}</a></li>
-    {{/each}}
-</ul>
-</body>
+    <head>
+        <title>{{title}}</title>
+        <link rel="stylesheet" type="text/css" href="styles/home.css">
+    </head>
+    <body>
+    <div class="header-wrap">
+        <div class="header">{{title}}</div>
+    </div>
+    <ul class="vegetable-list">
+        {{#each vegetables}}
+            <li class="vegetable-list-item">
+                <div class="link-container">
+                    <a class="link" href="./{{name}}">
+                        <span>{{name}}</span>
+                    </a>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+    </body>
 </html>
