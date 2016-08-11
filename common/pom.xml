@@ -6,6 +6,7 @@
     <groupId>com.sjob.vegviewer.common</groupId>
     <artifactId>common</artifactId>
     <version>1.0.1</version>
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>

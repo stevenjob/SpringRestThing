@@ -1,5 +1,6 @@
 package com.sjob.vegviewer.shared;
 
+//import com.fasterxml.jackson.annotation.JsonView;
 import com.sjob.vegviewer.common.Vegetable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ public class VegetableController {
     @Autowired
     VegetableService vegetableService;
 
+//    @JsonView(Vegetable.VegetableViewSummary.class)
     @RequestMapping("/")
     public List<Vegetable> getAllVegetables() {
         return vegetableService.getAllVegetables();

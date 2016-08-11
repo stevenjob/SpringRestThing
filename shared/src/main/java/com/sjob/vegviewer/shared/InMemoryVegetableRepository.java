@@ -4,89 +4,91 @@ import com.sjob.vegviewer.common.Vegetable;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class InMemoryVegetableRepository implements VegetableRepository {
 
-    List<Vegetable> vegetables = new ArrayList<>();
+    Map<String, Vegetable> vegetables = new HashMap<>();
 
     public InMemoryVegetableRepository() {
         createVegetables();
     }
 
     private void createVegetables() {
-        vegetables.add(new Vegetable("Artichoke"));
-        vegetables.add(new Vegetable("Arugula"));
-        vegetables.add(new Vegetable("Asparagus"));
-        vegetables.add(new Vegetable("Aubergine"));
-        vegetables.add(new Vegetable("Amaranth"));
-        vegetables.add(new Vegetable("Legumes"));
-        vegetables.add(new Vegetable("Bok choy"));
-        vegetables.add(new Vegetable("Broccoflower"));
-        vegetables.add(new Vegetable("Broccoli"));
-        vegetables.add(new Vegetable("Brussels sprouts"));
-        vegetables.add(new Vegetable("Cabbage"));
-        vegetables.add(new Vegetable("Calabrese"));
-        vegetables.add(new Vegetable("Carrots"));
-        vegetables.add(new Vegetable("Cauliflower"));
-        vegetables.add(new Vegetable("Celery"));
-        vegetables.add(new Vegetable("Chard"));
-        vegetables.add(new Vegetable("Collard greens"));
-        vegetables.add(new Vegetable("Corn salad"));
-        vegetables.add(new Vegetable("Endive"));
-        vegetables.add(new Vegetable("Fiddleheads"));
-        vegetables.add(new Vegetable("Frisee"));
-        vegetables.add(new Vegetable("Fennel"));
-        vegetables.add(new Vegetable("Kale"));
-        vegetables.add(new Vegetable("Kohlrabi"));
-        vegetables.add(new Vegetable("Lettuce Lactuca sativa"));
-        vegetables.add(new Vegetable("Mustard greens"));
-        vegetables.add(new Vegetable("Nettles"));
-        vegetables.add(new Vegetable("New Zealand spinach"));
-        vegetables.add(new Vegetable("Okra"));
-        vegetables.add(new Vegetable("Chives"));
-        vegetables.add(new Vegetable("Garlic"));
-        vegetables.add(new Vegetable("Leek Allium porrum"));
-        vegetables.add(new Vegetable("Onion"));
-        vegetables.add(new Vegetable("Shallot"));
-        vegetables.add(new Vegetable("Spring onion"));
-        vegetables.add(new Vegetable("Parsley"));
-        vegetables.add(new Vegetable("Radicchio"));
-        vegetables.add(new Vegetable("Rhubarb"));
-        vegetables.add(new Vegetable("Beetroot"));
-        vegetables.add(new Vegetable("Carrot"));
-        vegetables.add(new Vegetable("Celeriac"));
-        vegetables.add(new Vegetable("Daikon"));
-        vegetables.add(new Vegetable("Ginger"));
-        vegetables.add(new Vegetable("Parsnip"));
-        vegetables.add(new Vegetable("Rutabaga"));
-        vegetables.add(new Vegetable("Turnip"));
-        vegetables.add(new Vegetable("Radish"));
-        vegetables.add(new Vegetable("Swede"));
-        vegetables.add(new Vegetable("Turnip"));
-        vegetables.add(new Vegetable("Wasabi"));
-        vegetables.add(new Vegetable("Horseradish"));
-        vegetables.add(new Vegetable("White radish"));
-        vegetables.add(new Vegetable("Skirret"));
-        vegetables.add(new Vegetable("Spinach"));
-        vegetables.add(new Vegetable("Topinambur"));
-        vegetables.add(new Vegetable("Tat soi"));
-        vegetables.add(new Vegetable("Potato"));
-        vegetables.add(new Vegetable("Sweet Potato"));
-        vegetables.add(new Vegetable("Yam"));
-        vegetables.add(new Vegetable("Water chestnut"));
-        vegetables.add(new Vegetable("Watercress"));
-        vegetables.add(new Vegetable("Zucchini"));
+        vegetables.put("Artichoke", new Vegetable("Artichoke"));
+        vegetables.put("Arugula", new Vegetable("Arugula"));
+        vegetables.put("Asparagus", new Vegetable("Asparagus"));
+        vegetables.put("Aubergine", new Vegetable("Aubergine"));
+        vegetables.put("Amaranth", new Vegetable("Amaranth"));
+        vegetables.put("Legumes", new Vegetable("Legumes"));
+        vegetables.put("Bok choy", new Vegetable("Bok choy"));
+        vegetables.put("Broccoflower", new Vegetable("Broccoflower"));
+        vegetables.put("Broccoli", new Vegetable("Broccoli"));
+        vegetables.put("Brussels sprouts", new Vegetable("Brussels sprouts"));
+        vegetables.put("Cabbage", new Vegetable("Cabbage"));
+        vegetables.put("Calabrese", new Vegetable("Calabrese"));
+        vegetables.put("Carrots", new Vegetable("Carrots"));
+        vegetables.put("Cauliflower", new Vegetable("Cauliflower"));
+        vegetables.put("Celery", new Vegetable("Celery"));
+        vegetables.put("Chard", new Vegetable("Chard"));
+        vegetables.put("Collard greens", new Vegetable("Collard greens"));
+        vegetables.put("Corn salad", new Vegetable("Corn salad"));
+        vegetables.put("Endive", new Vegetable("Endive"));
+        vegetables.put("Fiddleheads", new Vegetable("Fiddleheads"));
+        vegetables.put("Frisee", new Vegetable("Frisee"));
+        vegetables.put("Fennel", new Vegetable("Fennel"));
+        vegetables.put("Kale", new Vegetable("Kale"));
+        vegetables.put("Kohlrabi", new Vegetable("Kohlrabi"));
+        vegetables.put("Lettuce Lactuca sativa", new Vegetable("Lettuce Lactuca sativa"));
+        vegetables.put("Mustard greens", new Vegetable("Mustard greens"));
+        vegetables.put("Nettles", new Vegetable("Nettles"));
+        vegetables.put("New Zealand spinach", new Vegetable("New Zealand spinach"));
+        vegetables.put("Okra", new Vegetable("Okra"));
+        vegetables.put("Chives", new Vegetable("Chives"));
+        vegetables.put("Garlic", new Vegetable("Garlic"));
+        vegetables.put("Leek Allium porrum", new Vegetable("Leek Allium porrum"));
+        vegetables.put("Onion", new Vegetable("Onion"));
+        vegetables.put("Shallot", new Vegetable("Shallot"));
+        vegetables.put("Spring onion", new Vegetable("Spring onion"));
+        vegetables.put("Parsley", new Vegetable("Parsley"));
+        vegetables.put("Radicchio", new Vegetable("Radicchio"));
+        vegetables.put("Rhubarb", new Vegetable("Rhubarb"));
+        vegetables.put("Beetroot", new Vegetable("Beetroot"));
+        vegetables.put("Carrot", new Vegetable("Carrot"));
+        vegetables.put("Celeriac", new Vegetable("Celeriac"));
+        vegetables.put("Daikon", new Vegetable("Daikon"));
+        vegetables.put("Ginger", new Vegetable("Ginger"));
+        vegetables.put("Parsnip", new Vegetable("Parsnip"));
+        vegetables.put("Rutabaga", new Vegetable("Rutabaga"));
+        vegetables.put("Turnip", new Vegetable("Turnip"));
+        vegetables.put("Radish", new Vegetable("Radish"));
+        vegetables.put("Swede", new Vegetable("Swede"));
+        vegetables.put("Turnip", new Vegetable("Turnip"));
+        vegetables.put("Wasabi", new Vegetable("Wasabi"));
+        vegetables.put("Horseradish", new Vegetable("Horseradish"));
+        vegetables.put("White radish", new Vegetable("White radish"));
+        vegetables.put("Skirret", new Vegetable("Skirret"));
+        vegetables.put("Spinach", new Vegetable("Spinach"));
+        vegetables.put("Topinambur", new Vegetable("Topinambur"));
+        vegetables.put("Tat soi", new Vegetable("Tat soi"));
+        vegetables.put("Potato", new Vegetable("Potato"));
+        vegetables.put("Sweet Potato", new Vegetable("Sweet Potato"));
+        vegetables.put("Yam", new Vegetable("Yam"));
+        vegetables.put("Water chestnut", new Vegetable("Water chestnut"));
+        vegetables.put("Watercress", new Vegetable("Watercress"));
+        vegetables.put("Zucchini", new Vegetable("Zucchini"));
     }
 
     @Override
     public List<Vegetable> getAllVegetables() {
-        return vegetables;
+        return new ArrayList<>(vegetables.values());
     }
 
     @Override
     public Vegetable getVegetableByName(String name) {
-        return new Vegetable("thing thing thitinhjgjhntjknmk");
+        return vegetables.get(name);
     }
 }

@@ -2,13 +2,17 @@ package com.sjob.vegviewer.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonView;
 
 @JsonInclude(Include.NON_NULL)
 public class Vegetable {
 
+    public interface VegetableViewSummary {}
+
+    @JsonView(VegetableViewSummary.class)
     String name;
 
-    String description;
+    String description = "hello";
 
     public Vegetable() {
 
