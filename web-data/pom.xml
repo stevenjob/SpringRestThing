@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sjob.vegviewer.web-data</groupId>
+    <groupId>com.scuttler.vegetable.web-data</groupId>
     <artifactId>web-data</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
@@ -14,14 +14,14 @@
     </properties>
 
     <parent>
-        <groupId>com.sjob.vegviewer</groupId>
+        <groupId>com.scuttler.vegetable</groupId>
         <artifactId>parent</artifactId>
         <version>1.0.0</version>
     </parent>
 
     <dependencies>
         <dependency>
-            <groupId>com.sjob.vegviewer.common</groupId>
+            <groupId>com.scuttler.vegetable.common</groupId>
             <artifactId>common</artifactId>
             <version>${common.version}</version>
         </dependency>
