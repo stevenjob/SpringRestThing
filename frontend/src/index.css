@@ -1,0 +1,63 @@
+html {
+  overflow-y: scroll;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.header-wrap {
+  position: fixed;
+  height: 50px;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: black;
+  font-size: 2.5rem;
+}
+
+.header {
+  color: #ffffff;
+  text-align: center;
+  height: 100%;
+}
+
+.main-container {
+  margin: 50px auto;
+  width: 900px;
+}
+
+
+.vegetable-list {
+  margin: 50px auto;
+  width: 900px;
+  list-style: none;
+  padding: 0;
+}
+
+.vegetable-list-item {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  background-color: red;
+  border: 1px solid green;
+  height: 100px;
+}
+
+.vegetable-list-item-div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link-container {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.link {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}

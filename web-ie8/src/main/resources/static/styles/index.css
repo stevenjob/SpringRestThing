@@ -19,6 +19,36 @@ html {
     height: 100%;
 }
 
+.vegetable-list {
+    margin: 50px auto;
+    width: 900px;
+    list-style: none;
+    padding: 0;
+}
+
+.vegetable-list-item {
+    position: relative;
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    background-color: red;
+    border: 1px solid green;
+    height: 100px;
+}
+
+.link-container {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.link {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
 .main-container {
     margin: 50px auto;
     width: 900px;

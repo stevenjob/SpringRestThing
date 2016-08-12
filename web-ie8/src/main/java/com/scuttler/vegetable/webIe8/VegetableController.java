@@ -17,7 +17,7 @@ public class VegetableController {
 
     @RequestMapping("/")
     public String home(Model model) {
-        model.addAttribute("title", "Vegetables");
+        model.addAttribute("title", "Vegetable Scuttler");
         List<Vegetable> vegetables = vegetableService.getAllVegetables();
         model.addAttribute("vegetables", vegetables);
         return "home";
