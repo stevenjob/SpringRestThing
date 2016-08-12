@@ -1,5 +1,6 @@
 html {
     overflow-y: scroll;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .header-wrap {
@@ -9,13 +10,13 @@ html {
     width: 100%;
     z-index: 100;
     background-color: black;
+    font-size: 2.5rem;
 }
 
 .header {
     color: #ffffff;
     text-align: center;
     height: 100%;
-    line-height: 2;
 }
 
 .vegetable-list {

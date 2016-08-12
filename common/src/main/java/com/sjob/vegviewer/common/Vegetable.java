@@ -12,7 +12,11 @@ public class Vegetable {
     @JsonView(VegetableViewSummary.class)
     String name;
 
-    String description = "hello";
+    String description = "This is a vegetable. " +
+            "A vegetable is any part of a plant that is consumed by humans as food as part of a savory meal. The term vegetable is somewhat arbitrary, " +
+            "and largely defined through culinary and cultural tradition. It normally excludes other food derived from plants such as fruits, nuts and " +
+            "cereal grains, but includes seeds such as pulses. The original meaning of the word vegetable, still used in biology, was to describe all " +
+            "types of plant, as in the terms \"vegetable kingdom\" and \"vegetable matter\".";
 
     public Vegetable() {
 
