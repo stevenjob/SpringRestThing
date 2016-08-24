@@ -1,0 +1,18 @@
+
+# Eclipse
+.project
+.classpath
+.cache-main
+.settings/
+
+# Intellij
+.idea/
+*.iml
+
+# Frontend
+node_modules/
+/bin/
+npm-debug.log
+coverage
+dist/*
+!dist/index.html
