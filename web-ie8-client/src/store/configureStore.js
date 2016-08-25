@@ -1,7 +1,16 @@
-if (process.env.NODE_ENV === 'production') {
-  // eslint-disable-next-line
-  module.exports = require('./configureStore.prod');
-} else {
-  // eslint-disable-next-line
-  module.exports = require('./configureStore.dev');
+import { createStore, applyMiddleware } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import createLogger from 'redux-logger';
+import rootReducer from '../reducers';
+
+function configureStore(initialState) {
+  const store = createStore(
+    rootReducer,
+    initialState,
+    applyMiddleware(thunkMiddleware, createLogger())
+  );
+
+  return store;
 }
+
+export default configureStore;

@@ -1,9 +1,8 @@
 import Header from 'components/header/Header';
-
-const React = require('react');
-const Provider = require('react-redux').Provider;
-
-const configureStore = require('store/configureStore.prod');
+import React from 'react';
+import { Provider } from 'react-redux';
+import configureStore from 'store/configureStore';
+import VegetableGrid from 'components/vegetableGrid/VegetableGridContainer';
 
 const store = configureStore();
 
@@ -11,7 +10,7 @@ const App = () => (
   <Provider store={store}>
     <dev>
       <Header />
-      thing thing thing
+      <VegetableGrid />
     </dev>
   </Provider>
 );

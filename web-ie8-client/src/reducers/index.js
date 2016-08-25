@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { routerReducer as routing } from 'react-router-redux';
+import vegetables from './vegetables';
 
 const rootReducer = combineReducers({
-  routing
+  vegetables
 });
 
 export default rootReducer;

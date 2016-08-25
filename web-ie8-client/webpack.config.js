@@ -11,25 +11,32 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel'
-    }],
-    postLoaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loader: 'es3ify-loader'
-    }]
-  },
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
       }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
     })
   ],
+  module: {
+    loaders: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loaders: ['babel-loader']
+    }],
+    postLoaders: [
+      {
+        test: /\.js$/,
+        loaders: ['es3ify-loader']
+      }
+    ]
+  },
   resolve: {
     root: path.resolve('./src'), // webpack 2 doesnt need this, this is here for eslint
     modules: [
