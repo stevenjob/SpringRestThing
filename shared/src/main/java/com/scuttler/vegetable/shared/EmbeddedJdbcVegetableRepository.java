@@ -38,6 +38,7 @@ public class EmbeddedJdbcVegetableRepository implements VegetableRepository {
                 new VegetableRowMapper(), name);
     }
 
+    @Override
     public void addVegetable(Vegetable vegetable) {
         jdbc.update(
                 "insert into Vegetable (name, description)" +
@@ -46,9 +47,17 @@ public class EmbeddedJdbcVegetableRepository implements VegetableRepository {
                 vegetable.getDescription());
     }
 
+    @Override
+    public void deleteVegetableByName(String name) {
+        jdbc.update(
+                "delete from Vegetable" +
+                        " where name = ?",
+                name);
+    }
+
     private static class VegetableRowMapper implements RowMapper<Vegetable> {
         public Vegetable mapRow(ResultSet rs, int rowNum) throws SQLException {
-            return new Vegetable(rs.getString("name"));
+            return new Vegetable(rs.getString("name"), rs.getString("description"));
         }
     }
 }

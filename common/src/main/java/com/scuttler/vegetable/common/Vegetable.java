@@ -4,12 +4,15 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonView;
 
+import javax.validation.constraints.NotNull;
+
 @JsonInclude(Include.NON_NULL)
 public class Vegetable {
 
     public interface VegetableViewSummary {}
 
     @JsonView(VegetableViewSummary.class)
+    @NotNull
     String name;
 
     String description = "This is a vegetable. " +
@@ -24,6 +27,11 @@ public class Vegetable {
 
     public Vegetable(String name) {
         this.name = name;
+    }
+
+    public Vegetable(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
 
     public String getDescription() {

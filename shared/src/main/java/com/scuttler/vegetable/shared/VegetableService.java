@@ -21,4 +21,12 @@ public class VegetableService {
     public Vegetable getVegetableByName(String name) {
         return vegetableRepository.getVegetableByName(name);
     }
+
+    public void addVegetable(Vegetable vegetable) {
+        vegetableRepository.addVegetable(vegetable);
+    }
+
+    public void deleteVegetableByName(String name) {
+        vegetableRepository.deleteVegetableByName(name);
+    }
 }

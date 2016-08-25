@@ -91,4 +91,14 @@ public class InMemoryVegetableRepository implements VegetableRepository {
     public Vegetable getVegetableByName(String name) {
         return vegetables.get(name);
     }
+
+    @Override
+    public void deleteVegetableByName(String name) {
+
+    }
+
+    @Override
+    public void addVegetable(Vegetable vegetable) {
+
+    }
 }

@@ -23,4 +23,14 @@ public class VegetableService {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(url + "/" + name, Vegetable.class);
     }
+
+    public void deleteVegetableByName(String name) {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.delete(url + "/" + name);
+    }
+
+    public void addVegetable(Vegetable vegetable) {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.postForObject(url, vegetable, Vegetable.class);
+    }
 }

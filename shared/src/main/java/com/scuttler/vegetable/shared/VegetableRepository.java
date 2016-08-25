@@ -12,4 +12,8 @@ public interface VegetableRepository {
 
     Vegetable getVegetableByName(String name);
 
+    void deleteVegetableByName(String name);
+
+    void addVegetable(Vegetable vegetable);
+
 }
