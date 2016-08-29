@@ -1,0 +1,33 @@
+
+.vegetable-grid {
+  margin: 50px auto;
+  width: 900px;
+  height: 100%;
+}
+
+.no-vegetable-grid {
+
+}
+
+.vegetable-grid-item {
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  background-color: red;
+  border: 1px solid green;
+  height: 100px;
+}
+
+.link-container {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.link {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}

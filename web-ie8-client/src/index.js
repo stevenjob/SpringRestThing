@@ -7,8 +7,9 @@
 
 require('es5-shim');
 require('es5-shim/es5-sham');
+require('console-polyfill');
 require('es6-promise');
-require('whatwg-fetch');
+require('fetch-ie8');
 /**
  * CANNOT use `import` to import `react` or `react-dom`,
  * because `import` will run `react` before `require('es5-shim')`.

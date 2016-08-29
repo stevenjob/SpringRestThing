@@ -1,0 +1,12 @@
+.header {
+    position: fixed;
+    height: 50px;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: black;
+    font-size: 2.5rem;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+}

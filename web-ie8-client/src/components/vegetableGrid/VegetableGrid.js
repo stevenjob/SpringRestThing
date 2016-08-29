@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import VegetableTile from './VegetableTile';
+import './VegetableGrid.css';
 
 class VegetableGrid extends Component {
 
@@ -10,13 +11,13 @@ class VegetableGrid extends Component {
   render() {
     const { vegetables } = this.props;
     if (!vegetables) {
-      return (<div>No Vegetables</div>);
+      return (<div className="no-vegetable-grid">No Vegetables</div>);
     }
 
     const vegetableTiles = this.props.vegetables.map((vegetable) => (<VegetableTile vegetable={vegetable} />));
 
     return (
-      <div>
+      <div className="vegetable-grid">
         {vegetableTiles}
       </div>
     );

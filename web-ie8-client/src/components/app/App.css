@@ -1,0 +1,14 @@
+html {
+    overflow-y: scroll;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.main-container {
+    margin: 50px auto;
+    width: 900px;
+    height: 100%;
+}

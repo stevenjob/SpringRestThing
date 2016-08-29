@@ -1,10 +1,9 @@
 import React from 'react';
+import './Header.css';
 
 const Header = () => (
-  <div className="header-wrap">
-    <div className="header">
-      Vegetables
-    </div>
+  <div className="header">
+    Vegetables
   </div>
 );
 

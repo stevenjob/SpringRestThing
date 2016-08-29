@@ -1,7 +1,8 @@
+import { VEGETABLES_SET, VEGETABLE_SET } from 'constants/actionTypes';
 
 const initialState = [
   {
-    name: 'Carrot'
+    name: 'Carro'
   },
   {
     name: 'Potato'
@@ -9,8 +10,14 @@ const initialState = [
 ];
 
 const vegetables = (state = initialState, action) => {
-  console.log(action);
-  return state;
+  switch (action.type) {
+    case VEGETABLES_SET:
+      return [...state, ...action.vegetables];
+    case VEGETABLE_SET:
+      return [...state, action.vegetable];
+    default:
+      return state;
+  }
 };
 
 export default vegetables;

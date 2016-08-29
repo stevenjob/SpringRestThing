@@ -1,4 +1,8 @@
 import { VEGETABLES_SET, VEGETABLE_SET } from 'constants/actionTypes';
+import {
+  requestVegetables as apiRequestVegetables,
+  requestVegetable as apiRequestVegetable
+} from 'api/apiService';
 
 export const setVegetables = (vegetables) => ({
   type: VEGETABLES_SET,
@@ -11,7 +15,12 @@ export const setVegetable = (vegetable) => ({
 });
 
 
-export const requestVegetables = () => () => {
-  fetch(`http://${window.location.href}:8003`)
-    .then((response) => (console.log(response.json())));
+export const requestVegetables = () => (dispatch) => {
+  apiRequestVegetables()
+    .then((response) => (dispatch(setVegetables(response))));
+};
+
+export const requestVegetable = (name) => (dispatch) => {
+  apiRequestVegetable(name)
+    .then((response) => (dispatch(setVegetable(response))));
 };
