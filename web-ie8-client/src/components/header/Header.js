@@ -1,9 +1,12 @@
 import React from 'react';
 import './Header.css';
+import { hashHistory } from 'react-router';
 
 const Header = () => (
   <div className="header">
-    Vegetables
+    <a className="header link" onClick={() => (hashHistory.pushState('/'))}>
+      Vegetables
+    </a>
   </div>
 );
 

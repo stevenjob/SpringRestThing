@@ -13,7 +13,7 @@ const App = () => (
   <Provider store={store}>
     <dev>
       <Header />
-      <Router history={hashHistory}>
+      <Router history={hashHistory} >
         <Route path="/" component={VegetableGrid} />
         <Route path="/:vegetableName" component={VegetableView} />
       </Router>

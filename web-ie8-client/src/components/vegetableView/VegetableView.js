@@ -22,12 +22,12 @@ class VegetableView extends Component {
 
     return (
       <div className="vegetable-view">
-        <dev>
+        <div className="vegetable-name">
           {vegetable.name}
-        </dev>
-        <dev>
+        </div>
+        <div className="vegetable-description">
           {vegetable.description}
-        </dev>
+        </div>
       </div>
     );
   }

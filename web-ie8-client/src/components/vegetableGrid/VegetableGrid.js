@@ -14,7 +14,7 @@ class VegetableGrid extends Component {
       return (<div className="no-vegetable-grid">No Vegetables</div>);
     }
 
-    const vegetableTiles = this.props.vegetables.map((vegetable) => (<VegetableTile vegetable={vegetable} />));
+    const vegetableTiles = this.props.vegetables.map((vegetable) => (<VegetableTile key={vegetable.name} vegetable={vegetable} />));
 
     return (
       <div className="vegetable-grid">
