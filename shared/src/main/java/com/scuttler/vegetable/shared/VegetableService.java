@@ -11,7 +11,7 @@ import java.util.List;
 public class VegetableService {
 
     @Autowired
-    @Qualifier("EmbeddedVeg")
+    @Qualifier("InMemVeg")
     VegetableRepository vegetableRepository;
 
     public List<Vegetable> getAllVegetables() {
