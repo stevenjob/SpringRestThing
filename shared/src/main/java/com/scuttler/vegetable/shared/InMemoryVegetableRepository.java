@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Repository
+@Repository("InMemVeg")
 public class InMemoryVegetableRepository implements VegetableRepository {
 
     Map<String, Vegetable> vegetables = new HashMap<>();
